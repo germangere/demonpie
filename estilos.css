@@ -16,6 +16,10 @@ body {
   background-color: #252525;
 }
 
+main{
+  animation: aparecer 1s;
+}
+
 ul {
   list-style: none;
 }
@@ -78,6 +82,7 @@ p {
 .portada__menu ul li a {
   color: rgb(214, 2, 2);
   text-decoration: none;
+  transition: 0.5s;
 }
 
 .portada__menu ul li a:hover {
@@ -95,6 +100,7 @@ p {
   text-decoration: none;
   color: dimgrey;
   line-height: 4rem;
+  transition: 0.5s;
 }
 
 .portada__social ul li a:hover {
@@ -114,6 +120,12 @@ nav {
 nav img {
   height: 100px;
   margin: 5px 20px;
+  transition: 0.5s;
+}
+
+nav img:hover{
+  filter: invert(2);
+  transition: 0.5s;
 }
 
 nav ul li {
@@ -125,6 +137,7 @@ nav ul li a {
   font-size: 24px;
   color: #252525;
   margin: 20px;
+  transition: 0.5s;
 }
 
 nav ul li a:hover {
@@ -184,6 +197,7 @@ iframe {
   color:#c8c8c8;
   font-size: 18px;
   padding: 5px 15px;
+  transition: 0.5s;
 }
 
 .media__menu ul li a:hover {
@@ -352,21 +366,56 @@ h2 {
   grid-area: int4;
 }
 
+.shows__container {
+  color:#c8c8c8;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding-bottom: 50px;
+  
+}
 
+@keyframes aparecer {
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+  
+}
 
-table {
+#fila1{
+  animation: aparecer 2s;
+}
+#fila2{
+  animation: aparecer 2.5s;
+}
+#fila3{
+  animation: aparecer 3s;
+}
+#fila4{
+  animation: aparecer 3.5s;
+}
+
+.shows__fila {
   text-align: center;
-  margin: 20px auto;
+  align-content: center;
+  border-bottom: 2px solid #930000;
+  padding: 20px 0;
 }
 
-td {
-  padding: 20px;
-  border-bottom: 1px solid #930000;
-  color: #c8c8c8;
-}
 
-td a {
+.shows__fila__comprar a {
   color: #930000;
+  padding: 0 5px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.shows__fila__comprar a:hover {
+  background-color: #c8c8c8;
+  transition: 0.5s;
 }
 
 form {
@@ -432,6 +481,7 @@ footer ul li a {
   font-size: 24px;
   color: #252525;
   letter-spacing: 10px;
+  transition: 0.5s;
 }
 
 footer ul li a:hover {
@@ -475,8 +525,6 @@ footer ul li a:hover {
   p {
     line-height: 2rem;
   }
-
-
 }
 
 @media screen and (min-width:768px){
@@ -552,6 +600,12 @@ footer ul li a:hover {
     grid-column: 1/3;
     background-position: top center;
   }
+
+  .shows__fila{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+  }
 }
 
 @media screen and (min-width:1200px){
@@ -565,6 +619,18 @@ footer ul li a:hover {
     width: 70%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 400px);
+  }
+
+  .fotos__pic{
+    filter: grayscale();
+    transition: 0.5s;
+  }
+  
+  .fotos__pic:hover{
+    transform: scale(1.1);
+    filter: none;
+    transition: 0.5s;
+    z-index: 1;
   }
 
   .foto1 {
@@ -612,5 +678,9 @@ footer ul li a:hover {
     grid-template-rows: 300px;
     grid-template-areas:
     "int1 int2 int3 int4";
+  }
+
+  .shows__fila{
+    padding: 20px 10%;
   }
 }
