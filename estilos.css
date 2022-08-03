@@ -184,11 +184,12 @@ iframe {
   justify-content: space-evenly;
   background-color: #930000;
   border-radius: 15px;
+  padding: 0;
 }
 
 .media__menu ul li {
   display: inline;
-  padding: 5px 15px;
+  padding: 5px 10px;
 
 }
 
@@ -503,7 +504,7 @@ footer ul li a:hover {
 
 .portada__foot h3 {
   padding: 0;
-  margin: 0;
+  margin-top: 2px;
 }
 
 @media screen and (min-width:599px){
