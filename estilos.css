@@ -41,8 +41,9 @@ p {
   align-items: center;
   justify-content: flex-end;
   background-image: url("images/port.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  height: calc(100vh - 140px);
+  height: 100vh;
   animation-name: barrido;
   animation-iteration-count: infinite;
   animation-duration: 20s;
@@ -58,36 +59,6 @@ p {
   to {
     background-position: top right;
   }
-}
-
-.portada__menu {
-  order: 1;
-  width: 100%;
-  font-size: x-large;
-  font-weight: 700;
-  background-color: #252525;
-  padding: 20px
-}
-
-.portada__menu ul {
-  text-align: center;
-}
-
-.portada__menu ul li {
-  display: inline;
-  margin: 20px;
-  padding: 10px;
-}
-
-.portada__menu ul li a {
-  color: rgb(214, 2, 2);
-  text-decoration: none;
-  transition: 0.5s;
-}
-
-.portada__menu ul li a:hover {
-  color: rgb(200, 200, 200);
-  transition: 0.5s;
 }
 
 .portada__social {
@@ -108,13 +79,19 @@ p {
   transition: 0.5s;
 }
 
+.portada__body .navbar-brand{
+  color: #c8c8c8;
+  cursor: default;
+}
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background: linear-gradient(75deg, #930000, #730000)
+.portada__body .nav-link{
+  color: #930000;
+  transition: 0.5s;
+}
+
+.portada__body .nav-link:hover{
+  color: rgb(200, 200, 200);
+  transition: 0.5s;
 }
 
 nav img {
@@ -128,19 +105,16 @@ nav img:hover{
   transition: 0.5s;
 }
 
-nav ul li {
-  display: inline;
+.navbar:not(.portada__body .navbar){
+  background: linear-gradient(75deg, #930000, #730000)
 }
 
-nav ul li a {
-  text-decoration: none;
-  font-size: 24px;
+.nav-link {
   color: #252525;
-  margin: 20px;
   transition: 0.5s;
 }
 
-nav ul li a:hover {
+.nav-link:hover {
   color: rgb(200, 200, 200);
   transition: 0.5s;
 }
@@ -419,36 +393,9 @@ h2 {
   transition: 0.5s;
 }
 
-form {
+ form {
   color:#c8c8c8;
   margin: 30px;
-}
-
-form p {
-  margin: 0;
-}
-
-input {
-  border-radius: 5px;
-  border-style: unset;
-  height: 30px;
-  width: 300px;
-  margin: 20px;
-  padding: 5px;
-}
-
-textarea {
-  border-radius: 5px;
-  border-style: unset;
-  margin: 20px;
-  padding: 10px;
-  width: 600px;
-  height: 200px;
-}
-
-div input {
-  width: 20px;
-  height: 20px;
 }
 
 footer {
@@ -508,11 +455,6 @@ footer ul li a:hover {
 }
 
 @media screen and (min-width:599px){
-  .portada__main {
-    height: calc(100vh - 105px);
-    background-size: cover;
-  }
-
   .integrantes {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 300px);
@@ -529,9 +471,6 @@ footer ul li a:hover {
 }
 
 @media screen and (min-width:768px){
-  nav {
-    justify-content: space-evenly;
-  }
 
   footer{
     flex-direction: row;
