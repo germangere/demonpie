@@ -363,6 +363,7 @@ h2 {
 .shows__fila__comprar a {
   color: #930000;
   padding: 0 5px;
+  text-decoration: none;
   border-radius: 10px;
   transition: 0.5s;
 }
