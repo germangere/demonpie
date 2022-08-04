@@ -8,6 +8,20 @@
   scroll-behavior: smooth;
 }
 
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #252525;
+  border-radius: 7px;
+  border: 1px solid #c8c8c8;
+}
+
 html {
   background-color: #930000;
 }
@@ -26,8 +40,6 @@ ul {
 
 p {
   color: #c8c8c8;
-  margin: 20px;
-  text-align: center;
 }
 
 .portada__body{
@@ -220,6 +232,15 @@ h2 {
 .fotos__pic{
   border-radius: 10px;
   box-shadow: 0 0 15px black;
+  filter: grayscale();
+  transition: 0.5s;
+}
+
+.fotos__pic:hover{
+  transform: scale(1.02);
+  filter: none;
+  transition: 0.5s;
+  z-index: 1;
 }
 
 .foto1 {
@@ -294,51 +315,12 @@ h2 {
 }
 
 .fotos__subir a:hover {
-  font-size: 38px;
+  font-size: 36px;
   transition: 0.2s;
 }
 
 .integrantes {
-  width: 90%;
-  margin: 20px auto;
-  height: auto;
-  display: grid;
-  grid-gap: 15px;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 300px);
-  grid-template-areas:
-  "int1"
-  "int2"
-  "int3"
-  "int4";
-}
-
-.integ1 {
-  background-image: url(images/enzo.jpg);
-  background-position: top center;
-  background-size: cover;
-  grid-area: int1;
-}
-
-.integ2 {
-  background-image: url(images/german.jpg);
-  background-position: center;
-  background-size: cover;
-  grid-area: int2;
-}
-
-.integ3 {
-  background-image: url(images/jp.jpg);
-  background-position: top center;
-  background-size: cover;
-  grid-area: int3;
-}
-
-.integ4 {
-  background-image: url(images/mati2.jpg);
-  background-position: top center;
-  background-size: cover;
-  grid-area: int4;
+  box-shadow: 0 0 15px black;
 }
 
 .shows__container {
@@ -347,17 +329,15 @@ h2 {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   padding-bottom: 50px;
-  
 }
 
 @keyframes aparecer {
   0%{
-      opacity: 0;
+    opacity: 0;
   }
   100%{
-      opacity: 1;
+    opacity: 1;
   }
-  
 }
 
 #fila1{
@@ -380,7 +360,6 @@ h2 {
   padding: 20px 0;
 }
 
-
 .shows__fila__comprar a {
   color: #930000;
   padding: 0 5px;
@@ -393,97 +372,31 @@ h2 {
   transition: 0.5s;
 }
 
- form {
+form {
   color:#c8c8c8;
   margin: 30px;
 }
 
 footer {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 20px 50px;
   background-color: rgb(147, 0, 0);
 }
 
-footer h3 {
-  order: 1;
-  color:#252525;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-footer ul {
-  order: 0;
-}
-
-footer ul li {
-  display: inline;
-}
-
-footer ul li a {
+footer a {
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   color: #252525;
   letter-spacing: 10px;
   transition: 0.5s;
 }
 
-footer ul li a:hover {
+footer a:hover {
   color: rgb(200, 200, 200);
   transition: 0.5s;
 }
 
-.portada__foot{
-  display: inline-block;
-  height: 30px;
-  order: 2;
-  width: 100%;
-  background-color: rgb(147, 0, 0);
-  text-align: center;
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
-}
-
-.portada__foot h3 {
-  padding: 0;
-  margin-top: 2px;
-}
-
-@media screen and (min-width:599px){
-  .integrantes {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 300px);
-    grid-template-areas:
-    "int3 int4"
-    "int3 int4"
-    "int1 int1"
-    "int2 int2";
-  }
-
+@media screen and (min-width:768px){
   p {
     line-height: 2rem;
-  }
-}
-
-@media screen and (min-width:768px){
-
-  footer{
-    flex-direction: row;
-  }
-
-  footer h3 {
-    order: 0;
-    margin: 0;
-    padding: 0;
-  }
-
-  footer ul {
-    order: 1;
   }
   
   .media__menu {
@@ -561,18 +474,6 @@ footer ul li a:hover {
     grid-template-rows: repeat(5, 400px);
   }
 
-  .fotos__pic{
-    filter: grayscale();
-    transition: 0.5s;
-  }
-  
-  .fotos__pic:hover{
-    transform: scale(1.1);
-    filter: none;
-    transition: 0.5s;
-    z-index: 1;
-  }
-
   .foto1 {
     grid-row: 1/3;
     grid-column: 1/2;
@@ -611,13 +512,6 @@ footer ul li a:hover {
   .foto8 {
     grid-row: 5/6;
     grid-column: 1/4;
-  }
-
-  .integrantes {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 300px;
-    grid-template-areas:
-    "int1 int2 int3 int4";
   }
 
   .shows__fila{

@@ -46,55 +46,71 @@
     </nav>
   </header>
   <main>
-    <section>
-      <h1>Nosotros</h1>
-      <p>
-        Demon Pie is a metal band from Mendoza City, Argentina. Its beginnings
-        were in 2004, when Juan Pablo Mahia (vocals) and Matias San Martin
-        (guitar) started the project as a New Metal Band. After recording his
-        first album in 2005, Germán Geredus (drums) joined the band and they
-        recorded a single in 2006. Over time the group was influenced by other
-        styles within the metal genre (melodic death metal, metalcore, groove
-        metal). which achieved an alternative style in their songs and a solid
-        sound. The line-up remained intact until 2017, when Enzo Brunetti
-        (bass) joined. In 2020 (Covid 19 pandemic), they recorded "The Arrival
-        Live Streaming", which clearly shows the changes in the band's
-        essence. They are currently producing their new plate at Havoc Studio,
-        which aims to come out in mid-2022. For now they released their first
-        single in December 2021: "Tu Victima", belonging to said album.
-      </p>
-    </section>
-    <section class="integrantes">
-      <div class="fotos__pic integ1"></div>
-      <div class="fotos__pic integ2"></div>
-      <div class="fotos__pic integ3"></div>
-      <div class="fotos__pic integ4"></div>
-    </section>
+    <div class="container">
+      <section>
+        <h1>Nosotros</h1>
+        <p class="text-center m-2">
+          Demon Pie es una banda de metal de la ciudad de Mendoza, Argentina. Sus inicios fueron en el año 2004, cuando Juan Pablo Mahia (voz) y Matías San Martín (guitarra) iniciaron el proyecto como New Metal Band. Luego de grabar su primer disco en 2005, Germán Geredus (batería) se unió a la banda y grabaron un sencillo en 2006. Con el tiempo el grupo fue influenciado por otros estilos dentro del género metal (melódico death metal, metalcore, groove metal). los cuales lograron un estilo alternativo en sus canciones y un sonido sólido. La formación se mantuvo intacta hasta 2017, cuando se incorporó Enzo Brunetti (bajo). En 2020 (pandemia de Covid 19), grabaron "The Arrival Live Streaming", que muestra claramente los cambios en la esencia de la banda. Actualmente están produciendo su nueva placa en Havoc Studio, que pretende salir a mediados de 2022. Por ahora lanzaron su primer sencillo en diciembre de 2021: “Tu Victima”, perteneciente a dicho disco.
+        </p>
+      </section>
+      <section class="integrantes my-4">
+        <div id="carouselIntegrantes" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../images/mati.jpg" class="d-block w-100" alt="Matías">
+              <div class="carousel-caption d-none d-md-block">
+                <p>Matías</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../images/jp.jpg" class="d-block w-100" alt="Juan Pablo">
+              <div class="carousel-caption d-none d-md-block">
+                <p>Juan Pablo</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../images/german.jpg" class="d-block w-100" alt="Germán">
+              <div class="carousel-caption d-none d-md-block">
+                <p>Germán</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../images/enzo.jpg" class="d-block w-100" alt="Enzo">
+              <div class="carousel-caption d-none d-md-block">
+                <p>Enzo</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselIntegrantes" data-bs-slide="prev">
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselIntegrantes" data-bs-slide="next">
+          </button>
+        </div>
+      </section>
+    </div>
   </main>
   <footer>
-    <h3>Demon Pie · Todos los derechos reservados</h3>
-    <ul>
-      <li>
-        <a href="https://open.spotify.com/artist/1GmHIgY4qbQaiObSfIpyYH?si=730c_E_1S_-nHYHq4A7Ivw" target="_blank">
-          <i class="fa-brands fa-spotify"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/demonpie_metalcore/" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/Demon-Pie-227518013927773" target="_blank">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/channel/UCDqpdpFF6aawmuxxMn2U1eA" target="_blank">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </li>
-    </ul>
+    <div class="container py-4 px-lg-5">
+      <div class="row align-items-center">
+        <div class="col-sm-8 text-center text-md-start">
+          <h3 class="fs-6">Demon Pie · Todos los derechos reservados</h3>
+        </div>
+        <div class="col-sm-4 text-center text-md-end text-nowrap">
+          <a href="https://open.spotify.com/artist/1GmHIgY4qbQaiObSfIpyYH?si=730c_E_1S_-nHYHq4A7Ivw" target="_blank">
+            <i class="fa-brands fa-spotify"></i>
+          </a>
+          <a href="https://www.instagram.com/demonpie_metalcore/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/Demon-Pie-227518013927773" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCDqpdpFF6aawmuxxMn2U1eA" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
