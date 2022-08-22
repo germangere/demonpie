@@ -80,8 +80,24 @@ p {
   line-height: 4rem;
   transition: 0.5s;
 }
-.portada__social ul li a:hover {
-  color: #c8c8c8;
+
+.portada__social__spotify:hover {
+  color: #1DB954;
+  transition: 0.5s;
+}
+
+.portada__social__youtube:hover {
+  color: #FF0000;
+  transition: 0.5s;
+}
+
+.portada__social__instagram:hover {
+  color: #E1306C;
+  transition: 0.5s;
+}
+
+.portada__social__facebook:hover {
+  color: #4267B2;
   transition: 0.5s;
 }
 
@@ -89,11 +105,11 @@ p {
   color: #c8c8c8;
   cursor: default;
 }
-.portada__body .nav-link {
+.portada__body .nav-link, .portada__body footer a, footer .portada__body a, .portada__body .shows__fila__comprar a, .shows__fila__comprar .portada__body a {
   color: #930000;
   transition: 0.5s;
 }
-.portada__body .nav-link:hover {
+.portada__body .nav-link:hover, .portada__body footer a:hover, footer .portada__body a:hover, .portada__body .shows__fila__comprar a:hover, .shows__fila__comprar .portada__body a:hover {
   color: #c8c8c8;
   transition: 0.5s;
 }
@@ -121,11 +137,11 @@ nav img:hover {
   background: linear-gradient(75deg, #930000, #730000);
 }
 
-.nav-link {
+.nav-link, footer a, .shows__fila__comprar a {
   color: #252525;
   transition: 0.5s;
 }
-.nav-link:hover {
+.nav-link:hover, footer a:hover, .shows__fila__comprar a:hover {
   color: #c8c8c8;
   transition: 0.5s;
 }
@@ -358,11 +374,10 @@ h2 {
   padding: 0 5px;
   text-decoration: none;
   border-radius: 10px;
-  transition: 0.5s;
 }
 .shows__fila__comprar a:hover {
+  color: #930000;
   background-color: #c8c8c8;
-  transition: 0.5s;
 }
 
 form {
@@ -376,13 +391,7 @@ footer {
 footer a {
   text-decoration: none;
   font-size: 20px;
-  color: #252525;
   letter-spacing: 10px;
-  transition: 0.5s;
-}
-footer a:hover {
-  color: #c8c8c8;
-  transition: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
