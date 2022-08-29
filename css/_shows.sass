@@ -1,0 +1,41 @@
+.shows__container
+  color: $blanco
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: auto
+  padding-bottom: 50px
+
+@keyframes aparecer
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+#fila1
+  animation: aparecer 2s
+
+#fila2
+  animation: aparecer 2.5s
+
+#fila3
+  animation: aparecer 3s
+
+#fila4
+  animation: aparecer 3.5s
+
+.shows__fila
+  text-align: center
+  align-content: center
+  border-bottom: 2px solid $rojo
+  padding: 20px 0
+
+.shows__fila__comprar
+  a
+    @extend .nav-link
+    color: $rojo
+    padding: 0 5px
+    text-decoration: none
+    border-radius: 10px
+    &:hover
+      color: $rojo
+      background-color: $blanco

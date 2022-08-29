@@ -1,0 +1,63 @@
+.portada__body
+  display: flex
+  flex-direction: column
+
+.portada__main
+  order: 0
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  background-image: url("images/port.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  height: 100vh
+  animation-name: barrido
+  animation-iteration-count: infinite
+  animation-duration: 20s
+  animation-direction: alternate
+  animation-timing-function: linear
+  flex-wrap: nowrap
+
+@keyframes barrido
+  from
+    background-position: top left
+  to
+    background-position: top right
+
+.portada__social
+  margin-right: 2rem
+  font-size: 1.75rem
+  text-align: center
+  ul
+    li
+      a
+        text-decoration: none
+        color: dimgrey
+        line-height: 4rem
+        transition: 0.5s
+
+$social: ("spotify": #1DB954, "youtube": #FF0000, "instagram": #E1306C, "facebook": #4267B2)
+
+@each $plat, $color in $social
+  .portada__social__#{$plat}:hover
+    color: $color
+    transition: 0.5s
+
+.portada__body
+  .navbar-brand
+    color: $blanco
+    cursor: default
+
+  .nav-link
+    color: $rojo
+    transition: 0.5s
+    &:hover
+      color: $blanco
+      transition: 0.5s
+
+#hamburport
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28147, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+
+#botonport
+  border-color: $rojo
+  --bs-navbar-toggler-focus-width: 0

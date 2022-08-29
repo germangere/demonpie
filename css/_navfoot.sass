@@ -1,0 +1,26 @@
+nav
+  img
+    height: 100px
+    margin: 5px 20px
+    transition: 0.5s
+    &:hover
+      filter: invert(2)
+      transition: 0.5s
+
+.navbar:not(.portada__body .navbar)
+  background: linear-gradient(75deg, $rojo, #730000)
+
+.nav-link
+  color: $gris
+  transition: 0.5s
+  &:hover
+    color: $blanco
+    transition: 0.5s
+
+footer
+  background-color: rgb(147, 0, 0)
+  a
+    @extend .nav-link
+    text-decoration: none
+    font-size: 20px
+    letter-spacing: 10px

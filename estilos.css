@@ -39,6 +39,30 @@ p {
   color: #c8c8c8;
 }
 
+h1 {
+  text-align: center;
+  color: #c8c8c8;
+  margin: 20px;
+  font-size: 50px;
+}
+
+iframe {
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #c8c8c8;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+form {
+  color: #c8c8c8;
+  margin: 30px;
+}
+
 .portada__body {
   display: flex;
   flex-direction: column;
@@ -105,11 +129,11 @@ p {
   color: #c8c8c8;
   cursor: default;
 }
-.portada__body .nav-link, .portada__body footer a, footer .portada__body a, .portada__body .shows__fila__comprar a, .shows__fila__comprar .portada__body a {
+.portada__body .nav-link, .portada__body .shows__fila__comprar a, .shows__fila__comprar .portada__body a, .portada__body footer a, footer .portada__body a {
   color: #930000;
   transition: 0.5s;
 }
-.portada__body .nav-link:hover, .portada__body footer a:hover, footer .portada__body a:hover, .portada__body .shows__fila__comprar a:hover, .shows__fila__comprar .portada__body a:hover {
+.portada__body .nav-link:hover, .portada__body .shows__fila__comprar a:hover, .shows__fila__comprar .portada__body a:hover, .portada__body footer a:hover, footer .portada__body a:hover {
   color: #c8c8c8;
   transition: 0.5s;
 }
@@ -137,25 +161,22 @@ nav img:hover {
   background: linear-gradient(75deg, #930000, #730000);
 }
 
-.nav-link, footer a, .shows__fila__comprar a {
+.nav-link, .shows__fila__comprar a, footer a {
   color: #252525;
   transition: 0.5s;
 }
-.nav-link:hover, footer a:hover, .shows__fila__comprar a:hover {
+.nav-link:hover, .shows__fila__comprar a:hover, footer a:hover {
   color: #c8c8c8;
   transition: 0.5s;
 }
 
-h1 {
-  text-align: center;
-  color: #c8c8c8;
-  margin: 20px;
-  font-size: 50px;
+footer {
+  background-color: rgb(147, 0, 0);
 }
-
-iframe {
-  border-radius: 12px;
-  margin-bottom: 20px;
+footer a {
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 10px;
 }
 
 #spotify {
@@ -212,13 +233,6 @@ iframe {
   width: 100%;
   margin-top: 20px;
   scroll-behavior: smooth;
-}
-
-h2 {
-  text-align: center;
-  color: #c8c8c8;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 #fotos {
@@ -378,20 +392,6 @@ h2 {
 .shows__fila__comprar a:hover {
   color: #930000;
   background-color: #c8c8c8;
-}
-
-form {
-  color: #c8c8c8;
-  margin: 30px;
-}
-
-footer {
-  background-color: rgb(147, 0, 0);
-}
-footer a {
-  text-decoration: none;
-  font-size: 20px;
-  letter-spacing: 10px;
 }
 
 @media screen and (min-width: 768px) {

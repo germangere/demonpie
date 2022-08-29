@@ -1,0 +1,63 @@
+$rojo: #930000
+$gris: #252525
+$blanco: #c8c8c8
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  text-decoration: none
+  font-family: 'Kanit', sans-serif
+  font-weight: 400
+  scroll-behavior: smooth
+
+  ::-webkit-scrollbar
+    width: 10px
+
+  ::-webkit-scrollbar-track
+    background: #111
+
+  ::-webkit-scrollbar-thumb
+    background-color: $gris
+    border-radius: 7px
+    border: 1px solid $blanco
+
+html
+  background-color: $rojo
+
+body
+  background-color: $gris
+
+main
+  animation: aparecer 1s
+
+ul
+  list-style: none
+
+p
+  color: $blanco
+
+h1
+  text-align: center
+  color: $blanco
+  margin: 20px
+  font-size: 50px
+
+iframe
+  border-radius: 12px
+  margin-bottom: 20px
+
+h2
+  text-align: center
+  color: $blanco
+  margin-top: 20px
+  margin-bottom: 20px
+
+@mixin flexColCen
+  display: flex
+  flex-direction: column
+  align-items: center
+
+form
+  color: $blanco
+  margin: 30px
